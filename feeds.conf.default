@@ -1,0 +1,28 @@
+#src-bzr通过使用bzr从数据源的pxiaath/URL下载数据
+#src-cpy通过从数据源path拷贝数据
+#src-darcs通过使用darcs从数据源path/URL下载数据
+#src-hg通过使用hg从数据源path/URL下载数据
+#src-link创建一个数据源path的symlink
+#src-svn通过使用svn从数据源path/URL下载数据
+
+
+#lean 仓库里自带的源
+src-git packages https://github.com/coolsnowwolf/packages
+src-git luci https://github.com/coolsnowwolf/luci
+src-git routing https://git.openwrt.org/feed/routing.git
+src-git telephony https://git.openwrt.org/feed/telephony.git
+
+#src-git video https://github.com/openwrt/video.git
+#src-git targets https://github.com/openwrt/targets.git
+#src-git management https://github.com/openwrt-management/packages.git
+#src-git oldpackages http://git.openwrt.org/packages.git
+#src-link custom /usr/src/openwrt/custom-feed
+
+
+#添加
+#jerrykuku 的仓库
+#包括他的 Argon-18.06 ｜ Argon-config 等等
+src-git jerryk https://github.com/jerrykuku/openwrt-package
+
+
+
