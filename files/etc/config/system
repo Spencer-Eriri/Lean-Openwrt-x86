@@ -6,7 +6,7 @@ config system
 	option urandom_seed '0'
 	option timezone 'CST-8'
 	option zonename 'Asia/Shanghai'
-	option hostname 'NanoPi_R2S'
+	option hostname 'Openwrt_x86'
 
 config timeserver 'ntp'
 	option enabled '1'
