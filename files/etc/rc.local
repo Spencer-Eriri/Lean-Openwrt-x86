@@ -1,0 +1,7 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+
+#解决重启后磁盘变为只读导致不能保存配置的问题（每次开机重新挂载目录为rw）
+mount -o remount rw /
+
+exit 0
