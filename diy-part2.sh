@@ -31,9 +31,6 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/' ~/lede/feeds/luci/collec
 #这个包里包括很多东西（如“加号软件”），但和 jerrykuku feeds 的仓库不是一个
 git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 
-#添加 Openclash (使用 svn 单独下载 openclash 项目内的 luci-app 文件）
-svn checkout https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/openclash
-
 #添加 Passwall
 git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 
