@@ -12,17 +12,22 @@ src-git luci https://github.com/coolsnowwolf/luci
 src-git routing https://git.openwrt.org/feed/routing.git
 src-git telephony https://git.openwrt.org/feed/telephony.git
 
+#这是原有的，仅作打开处理
+#fw876源
+#包含 ssr+ 
+src-git helloworld https://github.com/fw876/helloworld.git
+
+#添加
+#xiaorouji 源
+#包含 passwall
+src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git
+
+
 #src-git video https://github.com/openwrt/video.git
 #src-git targets https://github.com/openwrt/targets.git
 #src-git management https://github.com/openwrt-management/packages.git
 #src-git oldpackages http://git.openwrt.org/packages.git
 #src-link custom /usr/src/openwrt/custom-feed
-
-
-#添加
-#jerrykuku 的仓库
-#包括他的 Argon-18.06 ｜ Argon-config 等等
-src-git jerryk https://github.com/jerrykuku/openwrt-package
 
 
 
