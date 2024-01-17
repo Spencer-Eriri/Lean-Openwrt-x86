@@ -21,6 +21,8 @@ src-git helloworld https://github.com/fw876/helloworld.git
 #xiaorouji 源
 #包含 passwall
 src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git
+#xiaorouji passwall 的依赖
+src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall-packages.git
 
 
 #src-git video https://github.com/openwrt/video.git
