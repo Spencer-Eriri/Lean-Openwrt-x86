@@ -26,6 +26,9 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/' ~/lede/feeds/luci/collec
 
 
 #添加软件
+#添加某科学的超电磁炮
+#这个包里包括很多东西（如“加号软件”），但和 jerrykuku feeds 的仓库不是一个
+git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 
 #添加 Passwall
 git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/passwall
