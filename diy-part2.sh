@@ -28,5 +28,5 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon-18.06/' ~/lede/feeds/luci/collec
 #添加软件
 #添加jerrykuku的argon主题和配置文件
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/jerryk/luci-theme-argon-18.06
-git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git package/jerryk/luci-app-argon-config
+git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git package/jerryk/luci-app-argon-config-18.06
 
