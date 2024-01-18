@@ -23,9 +23,15 @@
 #但 Bootstrap 和 Argon-18.06 均会编译，在 config 中去除 Bootstrap 是无效的
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon-mod/' ~/lede/feeds/luci/collections/luci/Makefile
 
+
 rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/applications/luci-app-argon-config
+
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/downloads/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git package/downloads/luci-app-argon-config
+
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
+
 
 #添加软件
 #添加jerrykuku的argon配置工具 Lean 已集成所以不再需要
