@@ -5,7 +5,7 @@
 #解决重启后磁盘变为只读导致不能保存配置的问题
 mount -o remount rw /
 
-#允许 Trojan 的不安全连接
+#允许 SSR+ 采用的原版 Trojan 内核的不安全连接（passwall 默认允许，不受影响）
 #不检查远端主机所提供的 TLS 证书的有效性,其实仅需运行一次;用来解决节点不提供伪装域名证书或提供的证书无效导致无法连接的问题
 sed -i 's/result.insecure = "0"/result.insecure = "1"/' /usr/share/shadowsocksr/subscribe.lua 
 
