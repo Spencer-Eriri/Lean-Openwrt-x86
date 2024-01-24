@@ -5,8 +5,13 @@
 #解决重启后磁盘变为只读导致不能保存配置的问题
 mount -o remount rw /
 
-#允许 SSR+ 采用的原版 Trojan 内核的不安全连接（passwall 默认允许，不受影响）
+#允许 SSR+ 的 Trojan 的不安全连接（仅针对 SSR+ 生效）
 #不检查远端主机所提供的 TLS 证书的有效性,其实仅需运行一次;用来解决节点不提供伪装域名证书或提供的证书无效导致无法连接的问题
-sed -i 's/result.insecure = "0"/result.insecure = "1"/' /usr/share/shadowsocksr/subscribe.lua 
+sed -i 's/result.insecure = "0"/result.insecure = "1"/' /usr/share/shadowsocksr/subscribe.lua
+
+#这行和上面的修改无关，对应程序在启动过程中会自动应用修改后的配置
+#对 DHCP/DNS 应用“未保存的配置”，解决每次重启后都出现“未保存的配置”的问题，注意，和完全不能保存配置有本质区别；本命令仅针对 dhcp 程序，以便观察其他软件是否会产生类似问题。
+#固件编译且启动了 PDNSD 才会有这个现象，本固件中，在 Turbo ACC 中勾选 DNS 缓存即会出现。其原因在于，伴随 Turbo ACC 编译的 PDNSD 工具会在启动后自动把 dhcp 工具的自定义 dns 指向他自己，但他没有权限 commit，就造成了配置保存但未应用的现象；另外有些过墙软件也有 PDNSD
+uci commit dhcp
 
 exit 0
