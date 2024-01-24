@@ -48,7 +48,7 @@ jobs:
       if: steps.cacheHash.outputs.cache-hit != 'true'
       uses: peter-evans/repository-dispatch@v1
       with:
-        token: ${{ secrets.Openwrt-X86-Compile-trigger_PAT }}
+        token: ${{ secrets.Openwrt_X86_Compile_trigger_PAT }}
         event-type: Source Code Update
 
     - name: Delete workflow runs
